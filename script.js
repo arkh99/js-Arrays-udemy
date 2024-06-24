@@ -3,7 +3,7 @@
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // BANKIST APP
-
+/*
 // Data
 const account1 = {
   owner: 'Jonas Schmedtmann',
@@ -60,7 +60,7 @@ const inputTransferAmount = document.querySelector('.form__input--amount');
 const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
-
+*/
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -74,3 +74,16 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+
+// slice method * doesnt change the original array and returns a new array each time
+const arr = ['a', 'b', 'c', 'd', 'e'];
+// console.log(arr.slice(1, 3));
+// console.log(arr.slice(-2)) ;
+
+
+// splice method * changes the original array and returns a new array of changes
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const name = ["ali","mohsen", "reza"] 
+console.log(fruits.concat(name));
+console.log([...fruits, ...arr]);
+
