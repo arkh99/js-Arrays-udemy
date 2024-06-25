@@ -71,19 +71,59 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
 // slice method * doesnt change the original array and returns a new array each time
-const arr = ['a', 'b', 'c', 'd', 'e'];
+// const arr = ['a', 'b', 'c', 'd', 'e'];
 // console.log(arr.slice(1, 3));
 // console.log(arr.slice(-2)) ;
 
 
 // splice method * changes the original array and returns a new array of changes
-const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
-const name = ["ali","mohsen", "reza"] 
-console.log(fruits.concat(name));
-console.log([...fruits, ...arr]);
+// const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+// const name = ["ali","mohsen", "reza"]
+// console.log(fruits.concat(name));
+// console.log([...fruits, ...arr]);
 
+// const arr = [11, 23, 45, 62];
+
+// // getting the last element
+// console.log(arr[arr.length - 1]);
+// console.log(arr.slice(-1)[0]);
+// console.log(arr.at(-1));
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// for (const [i, el] of movements.entries()) {
+//   if (el > 0) {
+//     console.log(`Movement ${i + 1}: You deposited ${el}`);
+//   } else {
+//     console.log(`Movement ${i + 1}: You withdrew ${Math.abs(el)}`);
+//   }
+// }
+
+// movements.forEach(function (m) {
+//   if (m > 0) {
+//     console.log(`You deposited ${m}`);
+//   } else {
+//     console.log(`You withdrew ${Math.abs(m)}`);
+//   }
+// })
+
+// [...movements.entries()].forEach(function ([i, el]) {
+//   if (el > 0) {
+//     console.log(`Movement ${i + 1}: You deposited ${el}`);
+//   } else {
+//     console.log(`Movement ${i + 1}: You withdrew ${Math.abs(el)}`);
+//   }
+// })
+
+movements.forEach(function (el, i) {
+  if (el > 0) {
+    console.log(`Movement ${i + 1}: You deposited ${el}`);
+  } else {
+    console.log(`Movement ${i + 1}: You withdrew ${Math.abs(el)}`);
+  }
+})
