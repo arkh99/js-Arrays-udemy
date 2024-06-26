@@ -200,17 +200,30 @@ Test data:
 § Data 1: [5, 2, 4, 1, 15, 8, 3]
 § Data 2: [16, 6, 10, 5, 6, 1, 4]*/
 
-const calcAverageHumanAge = function (ages) {
-  const newages = ages.map(function (age) {
-    if (age <= 2) {
-      return age *2
-    }
-    else return age * 4 + 16
-  })
-  const adults = newages.filter(age => age >= 18)
-  console.log(adults);
-  return newages.reduce((acc, cur) => acc + cur, 0) / adults.length
+// const calcAverageHumanAge = function (ages) {
+//   const newages = ages.map(function (age) {
+//     if (age <= 2) {
+//       return age *2
+//     }
+//     else return age * 4 + 16
+//   })
+//   const adults = newages.filter(age => age >= 18)
+//   console.log(adults);
+//   return newages.reduce((acc, cur) => acc + cur, 0) / adults.length
+// }
+
+// const humenages = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4])
+// console.log(humenages);
+/*
+Rewrite the 'calcAverageHumanAge' function from Challenge #2, but this time
+as an arrow function, and using chaining!
+Test data:
+§ Data 1: [5, 2, 4, 1, 15, 8, 3]
+§ Data 2: [16, 6, 10, 5, 6, 1, 4]
+*/
+
+const calcAverageHumanAge = ages => {
+  return ages.map(age => age <= 2 ? age * 2 : age * 4 + 16).filter(age => age >= 18).reduce((acc, value, _,arr) => acc + value / arr.length , 0)   
 }
 
-const humenages = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4])
-console.log(humenages);
+// console.log(calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]));
