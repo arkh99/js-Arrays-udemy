@@ -227,3 +227,20 @@ const calcAverageHumanAge = ages => {
 }
 
 // console.log(calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]));
+
+const x = [1, 2, 3, 4];
+x.fill("kos", 2);
+
+const y = Array.from({ length: 8 }, () => 2);
+// generate 10 random dice rolls 
+const a = Array.from({ length: 10 }, () => (Math.floor(Math.random() * 6) + 1))
+// console.log(a);
+
+const ali = function () {
+  console.log(arguments);
+}
+
+const node = document.querySelectorAll("div") 
+console.log(node);
+
+ali(3, 2, 1);
